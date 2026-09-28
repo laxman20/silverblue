@@ -6,8 +6,8 @@ name: silverblue
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: latest # You can pin to a specific version of Fedora as well
+base-image: quay.io/fedora-ostree-desktops/silverblue
+image-version: 44
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -17,14 +17,23 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
+  - type: bling
+    install:
+      - rpmfusion
+
   - type: dnf
-    repos:
-      copr:
-        - atim/starship
+    # repos:
+    #   copr:
+    #     - atim/starship
     install:
       packages:
-        - micro
-        - starship
+        - ffmpeg
+        - ffmpegthumbnailer
+        - gstreamer1-plugins-bad-free-extras
+        - gstreamer1-plugins-bad-ugly
+        - gstreamer1-plugins-ugly
+        - gstreamer1-vaapi
+        - neovim
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
