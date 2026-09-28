@@ -29,10 +29,6 @@ modules:
       packages:
         - ffmpeg
         - ffmpegthumbnailer
-        - gstreamer1-plugins-bad-free-extras
-        - gstreamer1-plugins-bad-ugly
-        - gstreamer1-plugins-ugly
-        - gstreamer1-vaapi
         - neovim
     remove:
       packages:
