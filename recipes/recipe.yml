@@ -22,10 +22,11 @@ modules:
       cleanup: true
       nonfree: rpmfusion
     replace:
-      packages:
-        - old: ffmpeg-free
-          new: ffmpeg
-          allow-erasing: true
+      - from-repo: rpmfusion
+        packages:
+          - old: ffmpeg-free
+            new: ffmpeg
+            allow-erasing: true
     install:
       packages:
         - ffmpegthumbnailer
