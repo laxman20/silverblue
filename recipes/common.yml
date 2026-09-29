@@ -25,6 +25,8 @@ modules:
       packages:
         - terra-release
         - ffmpegthumbnailer
+        - gnome-tweaks
+        - gnome-shell-extension-appindicator
         - neovim
         - fish
         - ghostty
