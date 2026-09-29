@@ -29,6 +29,7 @@ modules:
         - fish
         - ghostty
         - ripgrep
+        - https://cdn.filen.io/@filen/desktop/release/latest/Filen_linux_x86_64.rpm
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
