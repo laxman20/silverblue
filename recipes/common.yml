@@ -55,6 +55,7 @@ modules:
           - org.localsend.localsend_app
           - org.nickvision.tubeconverter
           - com.mattjakeman.ExtensionManager
+          - org.gnome.World.PikaBackup
       - scope: user # Also add Flathub user repo, but no user packages
         notify: false
       - scope: system
