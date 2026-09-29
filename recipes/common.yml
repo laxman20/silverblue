@@ -26,7 +26,6 @@ modules:
         - terra-release
         - ffmpegthumbnailer
         - gnome-tweaks
-        - gnome-shell-extension-appindicator
         - neovim
         - fish
         - ghostty
@@ -54,6 +53,7 @@ modules:
           - net.nokyan.Resources
           - org.localsend.localsend_app
           - org.nickvision.tubeconverter
+          - com.mattjakeman.ExtensionManager
       - scope: user # Also add Flathub user repo, but no user packages
         notify: false
       - scope: system
@@ -64,5 +64,9 @@ modules:
           title: GNOME Nightly
         install:
           - org.tabos.stamp
+
+  - type: gnome-extensions
+    install:
+      - AppIndicator and KStatusNotifierItem Support
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
