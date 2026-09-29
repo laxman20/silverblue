@@ -26,7 +26,9 @@ modules:
         - terra-release
         - ffmpegthumbnailer
         - neovim
+        - fish
         - ghostty
+        - ripgrep
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -42,6 +44,21 @@ modules:
         install: # system flatpaks we want all users to have and not remove
           - org.mozilla.firefox
           - org.gnome.Loupe
+          - com.stremio.Stremio
+          - io.github.cleomenezesjr.Serigy
+          - io.github.flattool.Ignition
+          - md.obsidian.Obsidian
+          - net.nokyan.Resources
+          - org.localsend.localsend_app
+          - org.nickvision.tubeconverter
       - scope: user # Also add Flathub user repo, but no user packages
+      - scope: system
+        notify: true
+        repo:
+          url: https://nightly.gnome.org/gnome-nightly.flatpakrepo
+          name: gnome-nightly
+          title: GNOME Nightly
+        install:
+          - org.tabos.stamp
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
