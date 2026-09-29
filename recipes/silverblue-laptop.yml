@@ -13,3 +13,10 @@ image-version: 44
 # you can include multiple instances of the same module
 modules:
   - from-file: common.yml
+  - type: dnf
+    repos:
+      cleanup: true
+      nonfree: rpmfusion
+    install:
+      packages:
+        - intel-media-driver

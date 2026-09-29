@@ -13,6 +13,8 @@ modules:
     repos:
       cleanup: true
       nonfree: rpmfusion
+      files:
+        - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
     replace:
       - from-repo: rpmfusion-free-updates
         allow-erasing: true
@@ -21,8 +23,10 @@ modules:
             new: ffmpeg
     install:
       packages:
+        - terra-release
         - ffmpegthumbnailer
         - neovim
+        - ghostty
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
