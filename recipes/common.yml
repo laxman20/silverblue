@@ -56,6 +56,7 @@ modules:
           - org.nickvision.tubeconverter
           - com.mattjakeman.ExtensionManager
           - org.gnome.World.PikaBackup
+          - org.gnome.Papers
       - scope: user # Also add Flathub user repo, but no user packages
         notify: false
       - scope: system
