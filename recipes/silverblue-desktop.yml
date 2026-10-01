@@ -1,0 +1,36 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/<user>/<name>
+name: silverblue-desktop
+# description will be included in the image's metadata
+description: This is my personal OS image.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: quay.io/fedora-ostree-desktops/silverblue
+image-version: 44
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - from-file: common.yml
+  - type: dnf
+    repos:
+      cleanup: true
+      nonfree: rpmfusion
+    install:
+      packages:
+        - mesa-va-drivers-freeworld
+    replace:
+      - from-repo: rpmfusion-free-updates
+        allow-erasing: true
+        packages:
+          - old: mesa-vulkan-drivers
+            new: mesa-vulkan-drivers-freeworld
+
+  - type: default-flatpaks
+    configurations:
+      - notify: false
+        scope: system
+        install:
+          - com.valvesoftware.Steam
+          - com.valvesoftware.Steam.CompatibilityTool.Proton-GE
