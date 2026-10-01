@@ -31,6 +31,7 @@ modules:
         - chezmoi
         - ghostty
         - ripgrep
+        - wl-clipboard
 
   - type: default-flatpaks
     configurations:
