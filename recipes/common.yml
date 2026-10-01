@@ -32,6 +32,7 @@ modules:
         - ghostty
         - ripgrep
         - wl-clipboard
+        - distrobox
 
   - type: default-flatpaks
     configurations:
