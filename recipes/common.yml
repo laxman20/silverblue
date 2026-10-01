@@ -66,5 +66,7 @@ modules:
   - type: gnome-extensions
     install:
       - AppIndicator and KStatusNotifierItem Support
+      - Caffeine
+      - UPower Battery
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
