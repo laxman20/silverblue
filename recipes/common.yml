@@ -33,6 +33,7 @@ modules:
         - ripgrep
         - wl-clipboard
         - distrobox
+        - steam-devices
 
   - type: default-flatpaks
     configurations:
