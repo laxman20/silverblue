@@ -52,6 +52,7 @@ modules:
           - com.mattjakeman.ExtensionManager
           - org.gnome.World.PikaBackup
           - org.gnome.Papers
+          - org.gnome.NautilusPreviewer
       - scope: user # Also add Flathub user repo, but no user packages
         notify: false
       - scope: system
