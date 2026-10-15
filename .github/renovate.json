@@ -1,13 +1,15 @@
 {
   "$schema": "https://renovatebot.com",
   "extends": [
-    "config:base",
+    "config:recommended",
     "docker:pinDigests"
   ],
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^recipes/[a-zA-Z0-9_\\-]+\\.yml$"],
+      "managerFilePatterns": [
+        "/^recipes/[a-zA-Z0-9_\\-]+\\.yml$/"
+      ],
       "matchStrings": [
         "base-image:\\s*(?<depName>\\S+)\\s+image-version:\\s*[\"']?(?<currentValue>[\\w.+\\-]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?[\"']?"
       ],
