@@ -17,9 +17,12 @@
   "packageRules": [
     {
       "matchDatasources": ["docker"],
-      "matchUpdateTypes": ["digest", "patch", "minor"],
       "matchPackageNames": ["quay.io/fedora-ostree-desktops/silverblue"],
-      "allowedVersions": "44",
+      "allowedVersions": "44"
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["digest", "patch", "minor"],
       "automerge": true,
       "automergeType": "pr",
       "platformAutomerge": true
