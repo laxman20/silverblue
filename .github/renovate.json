@@ -1,0 +1,25 @@
+{
+  "$schema": "https://renovatebot.com",
+  "extends": [
+    "config:base"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^recipes/[a-zA-Z0-9_\\-]+\\.yml$"],
+      "matchStrings": [
+        "base-image:\\s*(?<depName>\\S+)\\s+image-version:\\s*[\"']?(?<currentValue>[\\w.+\\-]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?[\"']?"
+      ],
+      "datasourceTemplate": "docker"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["digest", "patch", "minor"],
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true
+    }
+  ]
+}
