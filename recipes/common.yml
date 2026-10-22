@@ -34,6 +34,7 @@ modules:
         - wl-clipboard
         - distrobox
         - steam-devices
+        - xdg-native-messaging-proxy
 
   - type: default-flatpaks
     configurations:
@@ -61,6 +62,8 @@ modules:
           - org.localsend.localsend_app
           - org.nickvision.tubeconverter
           - com.mattjakeman.ExtensionManager
+          - org.keepassxc.KeePassXC
+          - com.github.tchx84.Flatseal
       - scope: user # Also add Flathub user repo, but no user packages
         notify: false
       - scope: system
