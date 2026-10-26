@@ -35,6 +35,7 @@ modules:
         - distrobox
         - steam-devices
         - xdg-native-messaging-proxy
+        - rclone
 
   - type: default-flatpaks
     configurations:
