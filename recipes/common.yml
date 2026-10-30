@@ -29,7 +29,6 @@ modules:
         - neovim
         - fish
         - chezmoi
-        - ghostty
         - ripgrep
         - wl-clipboard
         - distrobox
@@ -67,6 +66,14 @@ modules:
           - com.github.tchx84.Flatseal
       - scope: user # Also add Flathub user repo, but no user packages
         notify: false
+      - scope: system
+        notify: false
+        repo:
+          url: https://tunaos.org/flatpak/tuna-os.flatpakrepo
+          name: tuna-os
+          title: Tuna OS
+        install:
+          - com.mitchellh.ghostty
       - scope: system
         notify: false
         repo:
