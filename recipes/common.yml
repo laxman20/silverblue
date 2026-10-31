@@ -68,6 +68,7 @@ modules:
           - com.github.tchx84.Flatseal
           - io.gitlab.adhami3310.Impression
           - io.github.idescriptor.iDescriptor
+          - com.jeffser.Nocturne
       - scope: user # Also add Flathub user repo, but no user packages
         notify: false
       - scope: system
