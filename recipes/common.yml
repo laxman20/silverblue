@@ -64,6 +64,7 @@ modules:
           - com.mattjakeman.ExtensionManager
           - org.keepassxc.KeePassXC
           - com.github.tchx84.Flatseal
+          - io.gitlab.adhami3310.Impression
       - scope: user # Also add Flathub user repo, but no user packages
         notify: false
       - scope: system
