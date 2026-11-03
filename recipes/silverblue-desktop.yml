@@ -13,20 +13,6 @@ image-version: '45'
 # you can include multiple instances of the same module
 modules:
   - from-file: common.yml
-  - type: dnf
-    repos:
-      cleanup: true
-      nonfree: rpmfusion
-    install:
-      packages:
-        - mesa-va-drivers-freeworld
-    replace:
-      - from-repo: rpmfusion-free-updates
-        allow-erasing: true
-        packages:
-          - old: mesa-vulkan-drivers
-            new: mesa-vulkan-drivers-freeworld
-
   - type: default-flatpaks
     configurations:
       - notify: false
