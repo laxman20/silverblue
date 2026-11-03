@@ -24,7 +24,6 @@ modules:
             new: ffmpeg
     install:
       packages:
-        - terra-release
         - ffmpegthumbnailer
         - gnome-tweaks
         - neovim
