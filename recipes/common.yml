@@ -34,7 +34,6 @@ modules:
         - wl-clipboard
         - distrobox
         - steam-devices
-        - rclone
         - tailscale
 
   - type: default-flatpaks
