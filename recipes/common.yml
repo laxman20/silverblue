@@ -98,6 +98,6 @@ modules:
     install:
       - AppIndicator and KStatusNotifierItem Support
       - Caffeine
-      - UPower Battery Indicator
+      - Bluetooth Battery Meter
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
