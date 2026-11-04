@@ -12,16 +12,28 @@ modules:
   - type: dnf
     repos:
       cleanup: true
-      nonfree: rpmfusion
+      nonfree: negativo17
       files:
         - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     replace:
-      - from-repo: rpmfusion-free-updates
-        allow-erasing: true
+      - from-repo: fedora-multimedia
+        skip-unavailable: true
         packages:
           - old: ffmpeg-free
             new: ffmpeg
+          - libva
+          - mesa-dri-drivers
+          - mesa-filesystem
+          - mesa-libEGL
+          - mesa-libGL
+          - mesa-libgbm
+          - mesa-va-drivers
+          - mesa-vulkan-drivers
+          - libheif
+          - libva-intel-media-driver
+          - intel-gmmlib
+          - intel-mediasdk
     install:
       packages:
         - ffmpegthumbnailer
@@ -88,6 +100,6 @@ modules:
     install:
       - AppIndicator and KStatusNotifierItem Support
       - Caffeine
-      - UPower Battery Indicator
+      - Bluetooth Battery Meter
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
