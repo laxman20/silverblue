@@ -18,7 +18,6 @@ modules:
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     replace:
       - from-repo: fedora-multimedia
-        skip-unavailable: true
         packages:
           - old: ffmpeg-free
             new: ffmpeg
