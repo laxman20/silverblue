@@ -45,6 +45,7 @@ modules:
         - distrobox
         - steam-devices
         - tailscale
+        - ghostty
 
   - type: default-flatpaks
     configurations:
@@ -78,14 +79,6 @@ modules:
           - com.jeffser.Nocturne
       - scope: user # Also add Flathub user repo, but no user packages
         notify: false
-      - scope: system
-        notify: false
-        repo:
-          url: https://tunaos.org/flatpak/tuna-os.flatpakrepo
-          name: tuna-os
-          title: Tuna OS
-        install:
-          - com.mitchellh.ghostty
       - scope: system
         notify: false
         repo:
