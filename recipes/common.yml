@@ -88,6 +88,14 @@ modules:
           title: GNOME Nightly
         install:
           - org.tabos.stamp
+      - scope: system
+        notify: false
+        repo:
+          url: https://hylki.hyprlab.co/flatpak/co.hyprlab.Hylki.flatpakrepo
+          name: hylki-origin
+          title: Hylki
+        install:
+          - co.hyprlab.Hylki
 
   - type: gnome-extensions
     install:
